@@ -29,7 +29,7 @@
       <DesignTime>true</DesignTime>
       <AutoGen>true</AutoGen>
     </Compile>
-    <Compile Update="PageObjects\UsersPageObject.cs">
+    <Compile Update="BusinessLogicLayer\UsersMethods.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>

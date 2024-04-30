@@ -14,7 +14,7 @@ using System.Xml.Linq;
 
 namespace APITestCaseCreationProject.PageObjects
 {
-    internal class UsersPageObject
+    internal class UsersMethods
     {
        public static string? BaseUrl;
         public static bool CreateUsers(int id, string name, string role, string email)
