@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\APILearningRestSharpFramework\APILearningRestSharpFramework.csproj" />
+    <ProjectReference Include="..\APICreationBL\APICreationBL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,9 +28,6 @@
       <DependentUpon>%(Filename)</DependentUpon>
       <DesignTime>true</DesignTime>
       <AutoGen>true</AutoGen>
-    </Compile>
-    <Compile Update="BusinessLogicLayer\UsersMethods.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
 

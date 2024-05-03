@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APILearningRestSharpFramework", "APILearningRestSharpFramework\APILearningRestSharpFramework.csproj", "{4D5C3D68-26A5-4A16-B5A2-3F96C44BD9E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestcasesCreationForAPI", "TestcasesCreationForAPI\TestcasesCreationForAPI.csproj", "{1ABD497D-47F8-4D51-A5FE-511FE2949396}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestcasesCreationForAPI", "TestcasesCreationForAPI\TestcasesCreationForAPI.csproj", "{1ABD497D-47F8-4D51-A5FE-511FE2949396}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICreationBL", "APICreationBL\APICreationBL.csproj", "{824699EA-66F2-4002-81AA-4B8A64B57423}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1ABD497D-47F8-4D51-A5FE-511FE2949396}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ABD497D-47F8-4D51-A5FE-511FE2949396}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ABD497D-47F8-4D51-A5FE-511FE2949396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{824699EA-66F2-4002-81AA-4B8A64B57423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824699EA-66F2-4002-81AA-4B8A64B57423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824699EA-66F2-4002-81AA-4B8A64B57423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824699EA-66F2-4002-81AA-4B8A64B57423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
