@@ -12,8 +12,8 @@ namespace APILearningRestSharpFramework
 {
     public class RestClientUtil
     {
-        static RestClient _RestClient;
-        static RestRequest _RestRequest;
+        static RestClient? _RestClient;
+        static RestRequest? _RestRequest;
 
         public static RestClient CraeteRestClient()
         {
@@ -25,11 +25,11 @@ namespace APILearningRestSharpFramework
         }
         public static RestRequest CreateRequest(string resource, Method method, DataFormat format) 
         {
-            RestRequest request = new RestRequest(resource);
-           
-            request.Method = method;
-            request.RequestFormat = format;
-            return request;
+            _RestRequest = new RestRequest(resource);
+
+            _RestRequest.Method = method;
+            _RestRequest.RequestFormat = format;
+            return _RestRequest;
 
         }
         
@@ -45,15 +45,19 @@ namespace APILearningRestSharpFramework
                 .Content);                       
         }
 
-        public static T Get<T>(string resource,DataFormat format)
+        public static T? Get<T>(string resource,DataFormat format, HttpStatusCode expectedStatusCode=HttpStatusCode.OK)
         {
             RestClient restClient = new RestClient("http://localhost:3000");
-            return JsonConvert.DeserializeObject<T>(
-                 restClient.Execute
+            var actualResponce = restClient.Execute
                  (
-                   CreateRequest(resource, Method.Get, format)                  
-                 )
-                 .Content);
+                   CreateRequest(resource, Method.Get, format)
+                 );
+           if(actualResponce.StatusCode.Equals(expectedStatusCode))
+            {
+                return JsonConvert.DeserializeObject<T>(actualResponce.Content);
+            }
+            throw new Exception("");
+          
         }
 
         public static T Put<T>(string resource, string payload, DataFormat format)

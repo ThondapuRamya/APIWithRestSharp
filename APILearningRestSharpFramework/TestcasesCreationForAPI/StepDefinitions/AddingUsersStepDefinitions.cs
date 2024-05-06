@@ -15,6 +15,11 @@ namespace APITestCaseCreationProject.StepDefinitions
         {
             var responce=PostUtils.CreatePost(id, name, role, email);
             Assert.AreEqual( id, responce.id);
+            //doubts
+            //get we are restricting to type how to do status code
+            //put operation is failing if we are not reading json again
+            //am getting null reference
+            //unable to read from config file
         }
 
         
